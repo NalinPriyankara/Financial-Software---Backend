@@ -11,7 +11,8 @@ use App\Repositories\All\SecurityRoles\SecurityRolesRepository;
 use Illuminate\Support\ServiceProvider;
 use App\Repositories\All\UserManagement\UserManagementInterface;
 use App\Repositories\All\UserManagement\UserManagementRepository;
-
+use App\Repositories\All\UploadData\UploadDataInterface;
+use App\Repositories\All\UploadData\UploadDataRepository;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -24,6 +25,7 @@ class AppServiceProvider extends ServiceProvider
         $this->app->bind(AuthInterface::class, AuthRepository::class);
         $this->app->bind(SecurityRolesInterface::class, SecurityRolesRepository::class);
         $this->app->bind(CompanySetupInterface::class, CompanySetupRepository::class);
+        $this->app->bind(UploadDataInterface::class, UploadDataRepository::class);
     }
 
     /**

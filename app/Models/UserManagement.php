@@ -66,4 +66,9 @@ class UserManagement extends Authenticatable
             get: fn ($value) => $value ? asset('storage/' . $value) : null,
         );
     }
+
+    public function uploads()
+    {
+        return $this->hasMany(UploadData::class, 'user_id');
+    }
 }

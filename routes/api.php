@@ -3,6 +3,7 @@
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\CompanySetupController;
 use App\Http\Controllers\SecurityRolesController;
+use App\Http\Controllers\UploadDataController;
 use App\Http\Controllers\UserManagementController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
@@ -51,3 +52,4 @@ Route::resource("user-managements", UserManagementController::class);
 
 Route::apiResource('security-roles', SecurityRolesController::class);
 Route::apiResource('company-setup', CompanySetupController::class);
+Route::apiResource('upload-data', UploadDataController::class);
