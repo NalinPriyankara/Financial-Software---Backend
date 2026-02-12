@@ -22,7 +22,7 @@ class UploadDataRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'file' => 'required|file|mimes:pdf,doc,docx,xls,xlsx,csv,jpg,jpeg,png|max:20480',
+            'file' => 'required|file|mimes:pdf,doc,docx,xls,xlsx,csv|max:20480',
             'user_id' => 'required|exists:user_managements,id',
         ];
     }
