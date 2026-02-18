@@ -56,7 +56,7 @@ class LoansController extends Controller
             return response()->json(['message' => 'Loan not found'], 404);
         }
 
-        $this->loansRepository->update($loan, $request->validated());
+        $this->loansRepository->update($id, $request->validated());
         return response()->json($this->loansRepository->find($id));
     }
 
